@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incomes</title>
+    <link rel="stylesheet" href="../css/output.css" />
+  </head>
+  <body class="bg-[#212121] text-white">
+    <header class="sticky top-0 left-0 z-50 bg-[#212121]">
+      <div class="container m-auto">
+        <div class="py-6">
+          <h1 class="text-4xl font-semibold text-center">Incomes page</h1>
+        </div>
+      </div>
+    </header>
+    <main class="flex">
+      <aside class="p-4 w-[280px] sticky top-[88px] h-[87.6vh]">
+        <div>
+          <a
+            class="block bg-[#212121] p-2 w-full rounded-md text-xl hover:bg-[#2b2b2bad] transition-all"
+            href="./index.html"
+            >Main</a
+          >
+          <a
+            class="my-2 block bg-[#212121] p-2 w-full rounded-md text-xl hover:bg-[#2b2b2bad] transition-all"
+            href="./history.html"
+            >History</a
+          >
+          <a
+            class="block bg-[#212121] p-2 w-full rounded-md text-xl hover:bg-[#2b2b2bad] transition-all"
+            href="./incomes.html"
+            >Incomes</a
+          >
+          <a
+            class="my-2 block bg-[#212121] p-2 w-full rounded-md text-xl hover:bg-[#2b2b2bad] transition-all"
+            href="./expenses.html"
+            >Expenses</a
+          >
+          <button
+            class="absolute bottom-4 left-4 p-2 rounded-md text-xl text-center hover:bg-[#2b2b2bad] transition-all js-logout"
+          >
+            Log out
+          </button>
+        </div>
+      </aside>
+      <section class="container border-l">
+        <div class="flex justify-between">
+          <div class="w-[350px] p-4 text-center sticky top-[88px] h-[87.6vh]">
+            <h1 class="mb-6 text-3xl">Add Incomes</h1>
+            <form class="js-form">
+              <input
+                class="w-full p-2 pl-3 rounded-md bg-[#373737ad] outline-none text-lg js-incomes-title"
+                type="text"
+                name="user_title"
+                aria-label="title"
+                placeholder="title"
+                required
+              />
+              <input
+                class="my-4 w-full p-2 pl-3 rounded-md bg-[#373737ad] outline-none text-lg js-incomes-amount"
+                type="number"
+                name="user_amount"
+                aria-label="amount"
+                placeholder="amount"
+                required
+              />
+              <input
+                class="w-full p-2 pl-3 rounded-md bg-[#373737ad] outline-none text-lg js-incomes-category"
+                type="text"
+                name="user_category"
+                aria-label="category"
+                placeholder="category"
+                required
+              />
+              <textarea
+                class="my-4 w-full p-2 pl-3 rounded-md bg-[#373737ad] outline-none text-lg text-white placeholder-gray-400 js-incomes-description"
+                placeholder="description"
+                name="user_description"
+                maxlength="30"
+              ></textarea>
+
+              <input
+                class="w-full p-2 pl-3 rounded-md bg-[#373737ad] outline-none text-lg js-incomes-date"
+                type="date"
+                name="user_date"
+                aria-label="date"
+                placeholder="date"
+                required
+              />
+              <button class="w-full mt-8 p-2 bg-blue-500 rounded-lg">
+                Add incomes
+              </button>
+            </form>
+          </div>
+          <div class="border-l pl-12">
+            <ul class="pt-8 w-[800px] js-incomes-text"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <template class="js-incomes-template">
+      <li
+        class="flex items-center justify-between mb-4 p-4 rounded-lg bg-[#353535]"
+      >
+        <h2 class="text-xl js-title"></h2>
+        <number class="js-amount"></number>
+        <type class="js-category"></type>
+        <p class="js-description"></p>
+        <time class="js-date"></time>
+        <button class="p-2 px-4 bg-red-500 rounded-lg js-delete-btn">
+          Delete
+        </button>
+      </li>
+    </template>
+
+    <script src="./js/incomes.js"></script>
+  </body>
+</html>

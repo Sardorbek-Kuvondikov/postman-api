@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History</title>
+    <link rel="stylesheet" href="../css/output.css" />
+  </head>
+  <body class="bg-[#212121] text-white">
+    <header class="sticky top-0 left-0 z-50 bg-[#212121]">
+      <div class="container m-auto">
+        <div class="py-6">
+          <h1 class="text-4xl font-semibold text-center">History page</h1>
+        </div>
+      </div>
+    </header>
+    <main class="flex">
+      <aside class="p-4 w-[280px] sticky top-[88px] h-[87.6vh]">
+        <div>
+          <a
+            class="block bg-[#212121] p-2 w-full rounded-md text-xl hover:bg-[#2b2b2bad] transition-all"
+            href="./index.html"
+            >Main</a
+          >
+          <a
+            class="my-2 block bg-[#212121] p-2 w-full rounded-md text-xl hover:bg-[#2b2b2bad] transition-all"
+            href="./history.html"
+            >History</a
+          >
+          <a
+            class="block bg-[#212121] p-2 w-full rounded-md text-xl hover:bg-[#2b2b2bad] transition-all"
+            href="./incomes.html"
+            >Incomes</a
+          >
+          <a
+            class="my-2 block bg-[#212121] p-2 w-full rounded-md text-xl hover:bg-[#2b2b2bad] transition-all"
+            href="./expenses.html"
+            >Expenses</a
+          >
+          <button
+            class="absolute bottom-4 left-4 p-2 rounded-md text-xl text-center hover:bg-[#2b2b2bad] transition-all js-logout"
+          >
+            Log out
+          </button>
+        </div>
+      </aside>
+      <section class="container border-l">
+        <div>
+          <ul class="p-4 border flex items-center justify-around rounded-md">
+            <li class="p-2 px-6 rounded-md bg-[#2b2b2b]">
+              <h3 class="text-xl">
+                total incomes:
+                <span class="text-blue-500" id="income"></span> so'm
+              </h3>
+            </li>
+            <li class="p-2 px-6 rounded-md bg-[#2b2b2b]">
+              <h3 class="text-xl">
+                total expenses:
+                <span class="text-red-500" id="expenses"></span> so'm
+              </h3>
+            </li>
+          </ul>
+        </div>
+        <ul class="mt-10 js-text"></ul>
+      </section>
+    </main>
+
+    <template class="js-template">
+      <li
+        class="flex items-center justify-between mb-4 p-6 rounded-lg bg-[#2B2B2B]"
+      >
+        <h2 class="text-xl js-title"></h2>
+        <type class="text-lg js-type"></type>
+        <number class="text-lg js-amount"></number>
+        <span class="text-lg js-category"></span>
+        <p class="text-lg js-description"></p>
+        <time class="text-lg js-date"></time>
+      </li>
+    </template>
+    <script src="./js/history.js"></script>
+  </body>
+</html>
