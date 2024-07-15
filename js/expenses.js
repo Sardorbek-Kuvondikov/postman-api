@@ -1,6 +1,6 @@
 let token = window.localStorage.getItem("token");
 if (!token) {
-  window.location.pathname = "./login.js";
+  window.location.pathname = "../login.html";
 }
 const elLogOut = document.querySelector(".js-logout");
 elLogOut.addEventListener("click", (evt) => {
